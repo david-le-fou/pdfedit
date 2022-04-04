@@ -1,6 +1,11 @@
 <?php
 use setasign\Fpdi\Fpdi;
-
+require_once('data.php');
+if($_REQUEST['type_pdf'] == 'lp1'){
+    $data = $data_LP1;
+}else{
+    die();
+}
 require_once('fpdf/fpdf.php');
 // require_once('html2pdf/src/Html2Pdf.php');
 require_once('fpdi2/src/autoload.php');
@@ -20,8 +25,12 @@ $pdf->useTemplate($tplIdx, 5, 5, 200);
 $pdf->Image('QR.jpg',160,20,35);
 
 $pdf->SetFont('Helvetica');
+
 $pdf->SetTextColor(255, 0, 0);
-$pdf->SetXY(100, 113);
-$pdf->Write(0, 'This is just a simple text vody');
+foreach($data as $cle =>$val){
+    $pdf->SetXY($val['X'], $val['Y']);
+    $pdf->Write(0, $val['val']);
+    
+}
 
 $pdf->Output('I', 'generated.pdf');
