@@ -11,7 +11,7 @@ $pdf = new Fpdi();
 // add a page
 $pdf->AddPage();
 // set the source file
-$pdf->setSourceFile('LPM1.pdf');
+$pdf->setSourceFile('modele/LPM1.pdf');
 // import page 1
 $tplIdx = $pdf->importPage(1);
 // use the imported page and place it at position 10,10 with a width of 100 mm
