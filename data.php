@@ -1,11 +1,13 @@
 <?php 
-    $data_LP1 = array("nom_prenom_titu" => array("val" => "ANDRIAMASINAVALONA davidson",
+    $data_LP1 = array(
+                    "url_qr_code" => "url image",
+                    "nom_prenom_titu" => array("val" => "ANDRIAMASINAVALONA davidson",
                                             "X" => 67,
                                             "Y" => 113),
                     "type_permis_titu" => array("val" => "test enjana",
                                             "X" => 67,
                                             "Y" => 118),
-                    "numero_titu" => array("val" => "test enjana",
+                    "numero_titu" => array("val" => "test enjana mety ve",
                                             "X" => 67,
                                             "Y" => 123),
                     "type_prod" => array("val" => "test enjana",
