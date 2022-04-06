@@ -2,6 +2,9 @@
 
 require_once('data.php');
 $type = $_REQUEST['type_pdf'];
+$down = $_REQUEST['down'];
+$nom = $_REQUEST['nom'];
+if(empty($nom) or empty($down)) die("Paramètre vide");
 switch ($type){
     case 'lp1':
         $data = $data_LP1;

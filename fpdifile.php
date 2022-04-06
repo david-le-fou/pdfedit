@@ -22,6 +22,6 @@ foreach($data as $cle =>$val){
     $pdf->Write(0, $val['val']);
     
 }
-
-$pdf->Output('I', 'generated.pdf');
+if($down == 'true') $pdf->Output('D', $nom.'.pdf');
+else $pdf->Output('I', $nom.'.pdf');
 ?>
