@@ -1,6 +1,6 @@
 <?php 
     $data_LP1 = array(
-                    "url_qr_code" => "url image",
+                    "url_qr_code" => "QR.jpg",
                     "nom_prenom_titu" => array("val" => "ANDRIAMASINAVALONA davidson",
                                             "X" => 67,
                                             "Y" => 113),
@@ -55,7 +55,7 @@
                                             
                     );
     $data_LP2 = array(
-        "url_qr_code" => "url image",
+        "url_qr_code" => "QR.jpg",
         "nom_prenom_trans" => array("val" => "ANDRIAMASINAVALONA davidson",
                                 "X" => 67,
                                 "Y" => 113),
@@ -119,7 +119,7 @@
                                 
         );
     $data_LP3C = array(
-        "url_qr_code" => "url image",
+        "url_qr_code" => "QR.jpg",
         "nom_prenom_trans" => array("val" => "ANDRIAMASINAVALONA davidson",
                                 "X" => 67,
                                 "Y" => 113),
@@ -186,14 +186,40 @@
                                 
         );
     $data_LP3E = array(
-        "nom_prenom" => array("val" => "ANDRIAMASINAVALONA davidson",
+        "url_qr_code" => "QR.jpg",
+        "nom_prenom_exp" => array("val" => "ANDRIAMASINAVALONA davidson",
                                 "X" => 67,
                                 "Y" => 121),
-        "type" => array("val" => "test",
+        "type_exp" => array("val" => "test",
                                 "X" => 67,
-                                "Y" => 127),
-        "nom_prenom" => array("val" => "ANDRIAMASINAVALONA davidson",
+                                "Y" => 126),
+        "numero_exp" => array("val" => "test",
                                 "X" => 67,
-                                "Y" => 121),
+                                "Y" => 131),
+        "date_exp" => array("val" => "test",
+                                "X" => 67,
+                                "Y" => 136),
+        "info1" => array("val" => "test",
+                                "X" => 30,
+                                "Y" => 160),
+        "info2" => array("val" => "test",
+                                "X" => 30,
+                                "Y" => 182),
+        "total" => array("val" => "test",
+                                "X" => 140,
+                                "Y" => 192),
+        "nom_preno_imp" => array("val" => "test",
+                                "X" => 67,
+                                "Y" => 210),
+        "adress_imp" => array("val" => "test",
+                                "X" => 67,
+                                "Y" => 215),
+        "pay_dest_imp" => array("val" => "test",
+                                "X" => 67,
+                                "Y" => 220),
+        "date_fait" => array("val" => "test",
+                                "X" => 140,
+                                "Y" => 232.5),
     );
+include('data_modif.php');
 ?>
