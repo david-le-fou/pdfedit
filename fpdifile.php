@@ -1,7 +1,50 @@
 <?php 
 use setasign\Fpdi\Fpdi;
 // initiate FPDI
+$text = "<table border='1'>
+        <tr>
+        <th>testx</th>
+        <th>testx</th>
+        <th>testx</th>
+        <th>testx</th>
+        <th>testx</th>
+        <th>testx</th>
+        </tr>
+        <tr>
+        <td>test</td>
+        <td>test</td>
+        <td>test</td>
+        <td>test</td>
+        <td>test</td>
+        <td>test</td>
+        </tr>
+        <tr>
+        <td>test</td>
+        <td>test</td>
+        <td>test</td>
+        <td>test</td>
+        <td>test</td>
+        <td>test</td>
+        </tr>
+        <tr>
+        <td>test</td>
+        <td>test</td>
+        <td>test</td>
+        <td>test</td>
+        <td>test</td>
+        <td>test</td>
+        </tr>
+        <tr>
+        <td>test</td>
+        <td>test</td>
+        <td>test</td>
+        <td>test</td>
+        <td>test</td>
+        <td>test</td>
+        </tr>
+        </table>";
 $pdf = new Fpdi();
+
 
 // add a page
 $pdf->AddPage();
@@ -16,12 +59,18 @@ $pdf->Image($data['url_qr_code'],160,20,35);
 
 $pdf->SetFont('Helvetica');
 
+
+$pdf->SetTextColor(255, 0, 0);
+$pdf->SetXY(1,240);
+$pdf->WriteHTML($text);
+
 $pdf->SetTextColor(255, 0, 0);
 foreach($data as $cle =>$val){
     $pdf->SetXY($val['X'], $val['Y']);
     $pdf->Write(0, $val['val']);
     
 }
+
 if($down == 'true') $pdf->Output('D', $nom.'.pdf');
 else $pdf->Output('I', $nom.'.pdf');
 ?>
